@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="EncodingDecoding" />
         <module name="Scenario01" />
         <module name="Scenario02" />
+        <module name="Servlet01" />
       </profile>
     </annotationProcessing>
   </component>
