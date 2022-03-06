@@ -11,6 +11,8 @@
     <modules>
         <module>Scenario01</module>
         <module>Scenario02</module>
+        <module>EncodingDecoding</module>
+        <module>Servlet01</module>
     </modules>
 
     <properties>
@@ -34,6 +36,14 @@
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--我不用jsp-->
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
