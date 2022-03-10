@@ -1,1 +1,5 @@
 aaaaa
+刷新git ignore 缓存
+git rm -r --cached .
+git add .
+git commit -m '.gitignore'
