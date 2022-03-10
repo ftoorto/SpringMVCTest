@@ -9,11 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71822783-3c23-487e-84de-e7273e685d44" name="Changes" comment="Servlet test update.">
-      <change afterPath="$PROJECT_DIR$/Servlet01/src/main/resources/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_3_6_18_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_3_6_18_40__Changes_.xml" afterDir="false" />
+    <list default="true" id="71822783-3c23-487e-84de-e7273e685d44" name="Changes" comment="更新">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servlet01/src/main/java/com/yy/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Servlet01/src/main/java/com/yy/HelloServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Scenario01/pom.xml" root0="FORCE_HIGHLIGHTING" />
@@ -49,8 +47,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="F:\code\Third_lib\MavenRepo" />
-        <option name="userSettingsFile" value="F:\code\Third_lib\MavenRepo\settings.xml" />
+        <option name="localRepository" value="D:\Official_lib\Java\maven_repo" />
+        <option name="userSettingsFile" value="D:\Official_lib\Java\apache-maven-3.8.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -73,7 +71,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.49310344" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.17">
     <configuration name="LambdaTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
