@@ -16,6 +16,7 @@ public class HelloServlet extends HttpServlet {
         String method = req.getParameter("method");
         ServletContext servletContext = req.getServletContext();
         String realPath = servletContext.getRealPath("/user");
+
         System.out.println(realPath);
 
         if (method.equals("add")){
