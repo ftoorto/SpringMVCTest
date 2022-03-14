@@ -12,12 +12,12 @@
 </form>
 <p id="score"></p>
 
-<script src="js/jquery-3.4.1.min.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
 <script>
     $("#btn").click(function () {
         $.ajax({
-            url:"servlet/HandlerServlet",   //请求地址
-            type:"get",   //请求方法
+            url:"http://localhost:8080/Servlet01_war_exploded/AjaxServlet",   //请求地址
+            type:"post",   //请求方法
             data:{"no":$("#no").val(),"name":$("#name").val()},   //要发送的数据,相当于表单提交的数据，json形式。
             dataType:"text",   //期待返回的数据类型，也可以理解为请求的数据类型
             error:function () {  //发生错误时的处理
