@@ -15,8 +15,9 @@ public class AjaxServlet extends HttpServlet {
         response.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS,DELETE");
         response.setContentType("text/html;charset=utf-8");
 
-        String No= (String) request.getAttribute("no");
-        String Name=(String) request.getAttribute("name");
+        String No= (String) request.getParameter("no");
+
+        String Name=(String) request.getParameter("name");
         System.out.println("No: "+No+"\n"+"Name: " +Name);
         response.getWriter().print("hahaha");
     }
