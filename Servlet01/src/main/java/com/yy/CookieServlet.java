@@ -5,6 +5,8 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -17,14 +19,15 @@ public class CookieServlet extends HttpServlet {
 
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss a");
         String date=simpleDateFormat.format(new Date());
-        Cookie cookie1=new Cookie("name","aaa");
-        Cookie cookie2=new Cookie("rst",date);
+        Cookie cookie1=new Cookie("name","呵 呵");
+        Cookie cookie2=new Cookie("rst", URLEncoder.encode(date,"utf-8"));// TODO URLEncoder 为何能解决空格问题
+        Cookie cookie3=new Cookie("rst", date);
         response.addCookie(cookie1);
-        response.addCookie(cookie2);// TODO 为何不能一次加两个cookie
+        response.addCookie(cookie2);
         Cookie[] cookies=request.getCookies();
         if (cookies!=null){
             for (Cookie cookie:cookies){
-                System.out.println("Cookie: "+cookie+"\n");
+                System.out.println("Cookie: "+cookie.getName()+" Value: "+ URLDecoder.decode(cookie.getValue(),"utf-8")+"\n");
             }
         }
         else {
