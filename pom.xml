@@ -13,6 +13,7 @@
         <module>Scenario02</module>
         <module>EncodingDecoding</module>
         <module>Servlet01</module>
+        <module>Bean01</module>
     </modules>
 
     <properties>
