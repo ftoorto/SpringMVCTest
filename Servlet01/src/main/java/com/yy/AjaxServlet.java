@@ -20,7 +20,7 @@ public class AjaxServlet extends HttpServlet {
         String Name=(String) request.getParameter("name");
         System.out.println("No: "+No+"\n"+"Name: " +Name);
         response.getWriter().print("hahaha");
-        response.sendRedirect("/index.jsp");
+//        response.sendRedirect("index.jsp");
     }
 
     @Override

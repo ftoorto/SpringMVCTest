@@ -12,11 +12,11 @@
 </form>
 <p id="score"></p>
 
-<script src="../../jquery-3.6.0.min.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
 <script>
     $("#btn").click(function () {
         $.ajax({
-            url:"/AjaxServlet",
+            url:"AjaxServlet",
             // url:"http://localhost:8080/Servlet01_war_exploded/AjaxServlet",   //请求地址
             type:"get",   //请求方法
             data:{"no":$("#no").val(),"name":$("#name").val()},   //要发送的数据,相当于表单提交的数据，json形式。
