@@ -10,16 +10,16 @@ import java.io.IOException;
 public class AjaxServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setCharacterEncoding("utf-8");
-        response.setHeader("Access-Control-Allow-Origin","*");
-        response.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS,DELETE");
-        response.setContentType("text/html;charset=utf-8");
+//        response.setCharacterEncoding("utf-8");
+//        response.setHeader("Access-Control-Allow-Origin","*");
+//        response.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS,DELETE");
+//        response.setContentType("text/html;charset=utf-8");
 
         String No= (String) request.getParameter("no");
 
         String Name=(String) request.getParameter("name");
         System.out.println("No: "+No+"\n"+"Name: " +Name);
-        response.getWriter().print("hahaha");
+        response.getWriter().print("游戏王");
 //        response.sendRedirect("index.jsp");
     }
 
