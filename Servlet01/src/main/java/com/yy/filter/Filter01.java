@@ -5,9 +5,11 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-//@WebFilter(filterName = "Filter01",value = "/*")
-//Filter 没用 为什么？# Todo
+//@WebFilter(filterName = "Filter01",value = "/AjaxServlet")
+//Filter 没用 为什么？
+//起作用了，可能是因为没刷新
 public class Filter01 implements Filter {
+    static int i=1;
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("Filter 01 is initialized");
@@ -20,6 +22,8 @@ public class Filter01 implements Filter {
         ((HttpServletResponse)response).setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS,DELETE");
         response.setContentType("text/html;charset=utf-8");
         System.out.println("Before Filter 01 is working");
+        System.out.println("The "+i+" time Filter 01 is accessed");
+        i++;
         chain.doFilter(request,response);
         System.out.println("After Filter 01 is working");
 
