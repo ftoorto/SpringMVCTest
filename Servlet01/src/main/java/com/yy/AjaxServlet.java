@@ -19,6 +19,11 @@ public class AjaxServlet extends HttpServlet {
 
         String Name=(String) request.getParameter("name");
         System.out.println("No: "+No+"\n"+"Name: " +Name);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         response.getWriter().print("游戏王");
 //        response.sendRedirect("index.jsp");
     }
