@@ -6,7 +6,7 @@ import jakarta.servlet.annotation.*;
 
 @WebListener
 public class Listener01 implements ServletContextListener, HttpSessionListener, HttpSessionAttributeListener,ServletRequestListener {
-
+    static int i=0;
     public Listener01() {
     }
 
@@ -17,7 +17,9 @@ public class Listener01 implements ServletContextListener, HttpSessionListener, 
 
     @Override
     public void requestInitialized(ServletRequestEvent sre) {
-        System.out.println("Request is initialized");
+        i++;
+        System.out.println("累计访问次数："+i+"次");
+        System.out.println("Request is initialized:"+sre.getSource());
     }
 
     @Override
@@ -35,7 +37,8 @@ public class Listener01 implements ServletContextListener, HttpSessionListener, 
     @Override
     public void sessionCreated(HttpSessionEvent se) {
         /* Session is created. */
-        System.out.println("Session is created.");
+        // # TODO Session在tomcat自动开启网页时会被创建两次，手动开启却只有一次？
+        System.out.println("Session is created: "+ se.getSession());
     }
 
     @Override
