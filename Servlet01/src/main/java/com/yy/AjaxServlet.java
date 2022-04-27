@@ -14,7 +14,6 @@ public class AjaxServlet extends HttpServlet {
 //        response.setHeader("Access-Control-Allow-Origin","*");
 //        response.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS,DELETE");
 //        response.setContentType("text/html;charset=utf-8");
-
         String No= (String) request.getParameter("no");
 
         String Name=(String) request.getParameter("name");
