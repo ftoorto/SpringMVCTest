@@ -6,7 +6,7 @@ import jakarta.servlet.annotation.*;
 
 @WebListener
 public class Listener01 implements ServletContextListener, HttpSessionListener, HttpSessionAttributeListener,ServletRequestListener {
-    static int i=0;
+    static Integer i=0;
     public Listener01() {
     }
 
@@ -20,6 +20,7 @@ public class Listener01 implements ServletContextListener, HttpSessionListener, 
         i++;
         System.out.println("累计访问次数："+i+"次");
         System.out.println("Request is initialized:"+sre.getSource());
+        sre.getServletContext().setAttribute("次数", i);
     }
 
     @Override

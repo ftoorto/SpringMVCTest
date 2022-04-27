@@ -24,7 +24,13 @@ public class AjaxServlet extends HttpServlet {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        response.getWriter().print("游戏王");
+        Integer integer=(Integer) request.getServletContext().getAttribute("次数");
+        boolean b = integer != null;
+        if(integer != null){
+            response.getWriter().print(integer.toString());
+        }
+        else
+            response.getWriter().println("首次访问");
 //        response.sendRedirect("index.jsp");
     }
 
