@@ -1,8 +1,8 @@
 package com.yy.listener;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 
 @WebListener
 public class Listener01 implements ServletContextListener, HttpSessionListener, HttpSessionAttributeListener,ServletRequestListener {
