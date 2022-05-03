@@ -15,6 +15,11 @@ public class AjaxServlet extends HttpServlet {
 //        response.setHeader("Access-Control-Allow-Origin","*");
 //        response.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS,DELETE");
 //        response.setContentType("text/html;charset=utf-8");
+        try {
+            Class.forName("com.yy.utils.StaticListener");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         String No= (String) request.getParameter("no");
 
         String Name=(String) request.getParameter("name");

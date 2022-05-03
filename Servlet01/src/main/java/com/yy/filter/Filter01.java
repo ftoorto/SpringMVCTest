@@ -25,10 +25,9 @@ public class Filter01 implements Filter {
         System.out.println("Before Filter 01 is working");
         System.out.println("The "+i+" time Filter 01 is accessed");
         i++;
-        ((HttpServletRequest)request).getSession();
-        ((HttpServletResponse) response).sendRedirect();
+//        ((HttpServletRequest)request).getSession();
+//        ((HttpServletResponse) response).sendRedirect("/");
         chain.doFilter(request,response);
-        chain.
         System.out.println("After Filter 01 is working");
 
     }

@@ -1,13 +1,23 @@
 package com.yy.utils;
 
-import org.springframework.web.context.ContextLoaderListener;
+import lombok.Data;
 
 import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
 
-public class StaticListener {
-    static{
-        ServletContext servletContext=  ContextLoaderListener.getCurrentWebApplicationContext().getServletContext();
-        servletContext.addF
+@Data
+public class StaticListener implements ServletContextListener {
+    private ServletContext servletContext;
 
+    @Override
+    public void contextInitialized(ServletContextEvent sce) {
+        this.servletContext=sce.getServletContext();
+    }
+
+    @Override
+    public void contextDestroyed(ServletContextEvent sce) {
+        ServletContextListener.super.contextDestroyed(sce);
     }
 }
+
