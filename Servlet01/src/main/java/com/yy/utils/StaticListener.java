@@ -1,7 +1,6 @@
 package com.yy.utils;
 
 import lombok.Data;
-import org.springframework.context.ApplicationContext;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
