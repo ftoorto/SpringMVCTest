@@ -10,6 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>Servlet01</artifactId>
+    <dependencies>
+
+    </dependencies>
 
 
     <properties>
