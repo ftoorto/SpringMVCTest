@@ -18,6 +18,10 @@ public class Test02 {
         String a="haha";
         Optional<String> s = a.describeConstable();
         System.out.println(s.get());
+
+        java.util.function.Predicate<String> predicate= str -> str.equals("hahapr");
+        System.out.println(predicate.test("hahapr"));
+
 //        Optional<Grade> grade=Optional.empty();
 //        System.out.println(grade.get());
 //        Grade grade2=null;
@@ -26,7 +30,7 @@ public class Test02 {
         ClassDesc classDesc= ConstantDescs.CD_Enum.arrayType();
     }
 
-    ConstantDesc constantDesc= s.
+//    ConstantDesc constantDesc= s.
     static void describe(Class<?> clazz, String pad, String leadin) {
         if (clazz == null) return;
         String type =
