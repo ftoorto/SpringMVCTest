@@ -15,6 +15,7 @@
         <module>Servlet01</module>
         <module>Bean01</module>
         <module>JavaListener</module>
+        <module>Spring01</module>
     </modules>
 
     <properties>

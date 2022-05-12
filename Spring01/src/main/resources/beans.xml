@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user_zhangsan" class="com.yy.pojo.User">
+        <property name="age" value="10" />
+        <property name="name" value="张三"/>
+        <property name="password" value="123456"/>
+    </bean>
+    <bean id="user_lisi" class="com.yy.pojo.User">
+
+        <constructor-arg name="age" value="20" />
+        <constructor-arg name="name" value="lisi"/>
+<!--# Todo 顺序导致报错，为什么，这里并没用index标签 -->
+        <constructor-arg name="password" value="111111"/>
+
+    </bean>
+
+</beans>
