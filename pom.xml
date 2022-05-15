@@ -16,6 +16,7 @@
         <module>Bean01</module>
         <module>JavaListener</module>
         <module>Spring01</module>
+        <module>ProxyTest</module>
     </modules>
 
     <properties>
