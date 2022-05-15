@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--# TODO p c 标签似乎可以不管schemalocation 为什么？-->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p ="http://www.springframework.org/schema/p"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xmlns:context="http://www.springframework.org/schema/context"
 
 
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <context:annotation-config/>
     <bean id="user_zhangsan" class="com.yy.pojo.User">
-        <property name="age" value="10" />
+        <property name="age" value="10"/>
         <property name="name" value="张三"/>
         <property name="password" value="123456"/>
     </bean>
     <bean id="user_lisi" class="com.yy.pojo.User">
         <constructor-arg name="name" value="lisi"/>
 
-        <constructor-arg name="age" value="20" />
-<!--# Todo 顺序导致报错，为什么，这里并没用index标签 -->
+        <constructor-arg name="age" value="20"/>
+        <!--# Todo 顺序导致报错，为什么，这里并没用index标签 -->
         <constructor-arg name="password" value="111111"/>
 
     </bean>
     <bean id="user_wangwu" class="com.yy.pojo.User" p:age="33" p:name="王五" p:password="666666"/>
     <bean id="Cat" class="com.yy.pojo.animal.Cat" p:name="跑得快"/>
     <bean id="dog" class="com.yy.pojo.animal.Dog" p:name="二哈"/>
-    <bean id="blackCat" class="com.yy.pojo.animal.BlackCat" p:name="黑炭"/>
+    <bean class="com.yy.pojo.animal.BlackCat" p:name="黑炭"/>
 
 
-    <bean id="user_lieren" class="com.yy.pojo.BeastMaster" autowire="byName">
-<!-- 使用byName，id必须是首字母小写的属性名,并且其他字母完全一致-->
-        <property name="age" value="40" />
+    <bean id="user_lieren" class="com.yy.pojo.BeastMaster"  autowire="byName">
+        <!-- 使用byName，id必须是首字母小写的属性名,并且其他字母完全一致-->
+        <property name="age" value="40"/>
         <property name="name" value="猎手"/>
     </bean>
 </beans>
